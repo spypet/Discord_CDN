@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  discord_cdn:
+    container_name: discord_cdn
+    image: crimefla.re/spypet/Discord_CDN
+    networks:
+      - public
+    volumes:
+      - ./.env:/usr/src/discord_cdn/.env
+    restart: on-failure
+
+networks:
+  public:
+    external: true
+    name: public

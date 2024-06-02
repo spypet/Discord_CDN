@@ -27,15 +27,16 @@ app.get('/:url(*)', async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.redirect('https://github.com/ShufflePerson/Discord_CDN');
-});
+  res.redirect(`This domain can be used by anyone to redirect to the latest URL of a Discord attachment. It runs https://github.com/ShufflePerson/Discord_CDN, so all credits should go to them.
 
+Contact Discord to report illegal content, as it's their responsibility to handle such issues on their servers. For anything else, contact admin(@)spy.pet.`);
+});
 
 async function initServer() {
     const config = await getConfig();
     discord = new Discord(config);
 
-    app.listen(config.PORT, "0.0.0.0", () => {
+    app.listen(config.PORT, () => {
         console.log(`Server can be accessed from http://localhost:${config.PORT}`);
     })
 }
