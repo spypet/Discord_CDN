@@ -3,7 +3,7 @@ version: "3.3"
 services:
   discord_cdn:
     container_name: discord_cdn
-    image: crimefla.re/spypet/Discord_CDN
+    image: crimefla.re/spypet/discord_cdn
     networks:
       - public
     volumes:

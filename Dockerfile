@@ -8,4 +8,4 @@ RUN npm install typescript -g
 RUN yarn
 RUN tsc
 
-CMD [ "node", "dist/index.js"]
+CMD [ "node", "./dist/server.js"]
